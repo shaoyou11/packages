@@ -1,0 +1,119 @@
+
+config smartdns
+	option port '6053'
+	option tcp_server '1'
+	option dualstack_ip_selection '0'
+	option serve_expired '0'
+	option rr_ttl_min '300'
+	option seconddns_tcp_server '1'
+	option seconddns_no_rule_addr '0'
+	option seconddns_no_rule_nameserver '0'
+	option seconddns_no_rule_ipset '0'
+	option seconddns_no_rule_soa '0'
+	option force_aaaa_soa '0'
+	option coredump '0'
+	option seconddns_port '5335'
+	option seconddns_server_group 'worldwide'
+	option server_name 'china'
+	option ipv6_server '0'
+	option prefetch_domain '1'
+	option cache_size '5120'
+	option rr_ttl_max '3600'
+	option seconddns_no_speed_check '1'
+	option seconddns_no_dualstack_selection '1'
+	option seconddns_no_cache '1'
+	option enabled '1'
+	option seconddns_enabled '1'
+	option redirect 'none'
+	list old_redirect 'none'
+	list old_port '6053'
+	list old_enabled '1'
+
+config server
+	option enabled '1'
+	option type 'udp'
+	option name '114dns'
+	option ip '114.114.114.114'
+	option server_group 'china'
+	option blacklist_ip '0'
+
+config server
+	option enabled '1'
+	option type 'udp'
+	option name 'ali'
+	option ip '223.5.5.5'
+	option server_group 'china'
+	option blacklist_ip '0'
+
+config server
+	option enabled '1'
+	option type 'udp'
+	option name 'Dnspod'
+	option ip '119.29.29.29'
+	option server_group 'china'
+	option blacklist_ip '0'
+
+config server
+	option enabled '1'
+	option type 'udp'
+	option name 'baidu'
+	option ip '180.76.76.76'
+	option server_group 'china'
+	option blacklist_ip '0'
+
+config server
+	option enabled '1'
+	option name 'Google1'
+	option ip '8.8.8.8'
+	option type 'tcp'
+	option server_group 'worldwide'
+	option blacklist_ip '0'
+
+config server
+	option enabled '1'
+	option name 'Google2'
+	option ip '8.8.8.8'
+	option type 'tls'
+	option server_group 'worldwide'
+	option blacklist_ip '0'
+
+config server
+	option enabled '1'
+	option name 'GoogleDNS'
+	option ip 'https://dns.google/dns-query'
+	option type 'https'
+	option server_group 'worldwide'
+	option blacklist_ip '0'
+
+config server
+	option enabled '1'
+	option ip '208.67.222.222'
+	option type 'tcp'
+	option name 'opendns1'
+	option server_group 'worldwide'
+	option blacklist_ip '0'
+
+config server
+	option enabled '1'
+	option name 'opendns2'
+	option type 'tls'
+	option server_group 'worldwide'
+	option blacklist_ip '0'
+	option ip '208.67.222.222'
+
+config server
+	option enabled '1'
+	option name 'OpenDNS'
+	option ip 'https://doh.opendns.com/dns-query'
+	option type 'https'
+	option server_group 'worldwide'
+	option blacklist_ip '0'
+
+config server
+	option enabled '1'
+	option type 'udp'
+	option name '移动'
+	option ip '211.140.12.188'
+	option server_group 'china'
+	option blacklist_ip '0'
+
